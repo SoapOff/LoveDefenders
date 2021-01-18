@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 1132049517}
   - component: {fileID: 1132049516}
   - component: {fileID: 1132049515}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bulll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
