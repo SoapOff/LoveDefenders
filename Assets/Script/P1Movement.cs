@@ -6,14 +6,14 @@ public class P1Movement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Vector2 moveDirection;
-    [SerializeField] private float moveSpeed;
+    [SerializeField] private float moveSpeed = 60f;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    private void FixedUpdate()
     {
         InputMovement();
     }
@@ -24,6 +24,7 @@ public class P1Movement : MonoBehaviour
         float moveY = Input.GetAxisRaw("Horizontal");
 
         moveDirection = new Vector2(moveY, moveX).normalized;
-        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        //rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        rb.AddForce(new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed));
     }
 }
