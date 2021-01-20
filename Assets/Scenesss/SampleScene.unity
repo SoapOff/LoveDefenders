@@ -442,27 +442,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!1 &1528940163 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7106462763741024469, guid: 58dc181c29b5c5d4c8fa8b8008422b05, type: 3}
-  m_PrefabInstance: {fileID: 7106462764157204236}
-  m_PrefabAsset: {fileID: 0}
---- !u!58 &1528940165
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528940163}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.5790656
 --- !u!1 &1860118722
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,10 +570,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 565774582991333289, guid: f9d955e62131fc149962fd33edbb2ff8, type: 3}
-      propertyPath: m_BodyType
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 565774582991333300, guid: f9d955e62131fc149962fd33edbb2ff8, type: 3}
       propertyPath: Player
       value: 
@@ -602,10 +577,6 @@ PrefabInstance:
     - target: {fileID: 565774582991333301, guid: f9d955e62131fc149962fd33edbb2ff8, type: 3}
       propertyPath: m_Name
       value: "m\xE9chant CaC"
-      objectReference: {fileID: 0}
-    - target: {fileID: 565774582991333301, guid: f9d955e62131fc149962fd33edbb2ff8, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 565774582991333302, guid: f9d955e62131fc149962fd33edbb2ff8, type: 3}
       propertyPath: m_LocalPosition.x
