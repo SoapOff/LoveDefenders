@@ -49,7 +49,7 @@ public class AddRoom : MonoBehaviour {
 		}
 
 		if(MoveToSallePos==true){
-			cam.transform.position = Vector3.MoveTowards(cam.transform.position, transformSalle.position, 0.05f);
+			cam.transform.position = Vector3.MoveTowards(cam.transform.position, transformSalle.position, 0.075f);
 		}
 	}
 

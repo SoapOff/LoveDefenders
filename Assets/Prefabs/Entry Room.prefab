@@ -610,6 +610,7 @@ MonoBehaviour:
   EnemiesTousMorts: 0
   cam: {fileID: 0}
   transformSalle: {fileID: 7170859101182030568}
+  spawner: {fileID: 0}
   MoveToSallePos: 0
 --- !u!1 &1476785428554506
 GameObject:
