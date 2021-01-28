@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7649192125848433251}
   - component: {fileID: 1363322705898424883}
   - component: {fileID: 1344821424280842882}
-  - component: {fileID: 8342056346202857852}
-  - component: {fileID: 8254078828301660470}
+  - component: {fileID: 4293268040732584159}
+  - component: {fileID: 626464793634196099}
   m_Layer: 8
   m_Name: Monstre
   m_TagString: Enemy
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6801223142065676252}
   m_LocalRotation: {x: -0, y: -0, z: -0.72730076, w: 0.686319}
-  m_LocalPosition: {x: 3.52, y: 2.64, z: 0}
+  m_LocalPosition: {x: 3.52, y: 2.64, z: 0.01}
   m_LocalScale: {x: 0.3544078, y: 0.324285, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: d3863f97a71357a4a959bb62e44db731, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TesMort: 0
   spawner: {fileID: 0}
---- !u!61 &8342056346202857852
+--- !u!61 &4293268040732584159
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,7 +109,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -125,7 +125,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.44, y: 6.4}
   m_EdgeRadius: 0
---- !u!50 &8254078828301660470
+--- !u!50 &626464793634196099
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0

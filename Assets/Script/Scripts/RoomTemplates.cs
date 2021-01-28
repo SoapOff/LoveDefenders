@@ -16,6 +16,7 @@ public class RoomTemplates : MonoBehaviour {
 	public float waitTime;
 	private bool spawnedGenerateur;
 	public GameObject generateur;
+	public GameObject Outils;
 	public float SpawnTempsGenerateur1=3;
 	public float SpawnTempsGenerateur2=1;
 	public float NombreRooms=10;
@@ -29,7 +30,7 @@ public class RoomTemplates : MonoBehaviour {
 					//spawnedGenerateur = true;
 				}
 				if(i == rooms.Count-SpawnTempsGenerateur2){
-					Instantiate(generateur, rooms[i].transform.position, Quaternion.identity);
+					Instantiate(Outils, rooms[i].transform.position, Quaternion.identity);
 					spawnedGenerateur = true;
 				}
 			}
