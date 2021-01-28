@@ -15,14 +15,19 @@ public class Bounce : MonoBehaviour
     public bool goBack = true;
     public bool goDown = false; 
 
-    public Vector2 worldLimits; 
+    public Vector2 worldLimits;
+
+    float rotation;
+    public float rotationSpeed = 15f;
 
     // Update is called once per frame
     void Update()
     {
 
-        Vector3 position = transform.position; 
+        Vector3 position = transform.position;
 
+        rotation += Time.deltaTime * rotationSpeed;
+        transform.rotation = Quaternion.Euler(0, 0, rotation);
 
         if (goBack == true) 
         {
