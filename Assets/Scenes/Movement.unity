@@ -159,6 +159,8 @@ MonoBehaviour:
   castMask:
     serializedVersion: 2
     m_Bits: 256
+  SonLien: []
+  SonChoisi: {fileID: 0}
 --- !u!120 &36622940
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -567,7 +569,7 @@ GameObject:
   - component: {fileID: 573237188}
   m_Layer: 0
   m_Name: Player2
-  m_TagString: Player
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
