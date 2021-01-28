@@ -10,6 +10,7 @@ public class Spawner : MonoBehaviour
     public float nombremonstre;
     public AddRoom addRoom;
      public static float NombreMonstreMort;
+     public bool UneFois;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,23 +37,26 @@ public class Spawner : MonoBehaviour
 
     public void Spawn()
     {
-        if(SpawnOuPas==1)
+        if(SpawnOuPas==1&&!UneFois)
         {
-             Instantiate(Monstre, new Vector3(transformSpawn[2].GetComponent<Transform>().position.x,transformSpawn[2].GetComponent<Transform>().position.y,transformSpawn[2].GetComponent<Transform>().position.z ), Quaternion.identity);
+            UneFois=true;
+             Instantiate(Monstre, new Vector3(transformSpawn[2].GetComponent<Transform>().position.x,transformSpawn[2].GetComponent<Transform>().position.y,0.01f), Quaternion.identity);
              nombremonstre=1;
         
         }
-        if(SpawnOuPas==2)
+        if(SpawnOuPas==2&&!UneFois)
         {
-             Instantiate(Monstre, new Vector3(transformSpawn[0].GetComponent<Transform>().position.x,transformSpawn[1].GetComponent<Transform>().position.y,transformSpawn[1].GetComponent<Transform>().position.z ), Quaternion.identity);
-              Instantiate(Monstre, new Vector3(transformSpawn[1].GetComponent<Transform>().position.x,transformSpawn[2].GetComponent<Transform>().position.y,transformSpawn[2].GetComponent<Transform>().position.z ), Quaternion.identity);
+            UneFois=true;
+             Instantiate(Monstre, new Vector3(transformSpawn[0].GetComponent<Transform>().position.x,transformSpawn[0].GetComponent<Transform>().position.y,0.01f), Quaternion.identity);
+              Instantiate(Monstre, new Vector3(transformSpawn[1].GetComponent<Transform>().position.x,transformSpawn[1].GetComponent<Transform>().position.y,0.01f ), Quaternion.identity);
              nombremonstre=2;
         }
-        if(SpawnOuPas==3)
+        if(SpawnOuPas==3&&!UneFois)
         {
-             Instantiate(Monstre, new Vector3(transformSpawn[0].GetComponent<Transform>().position.x,transformSpawn[0].GetComponent<Transform>().position.y,transformSpawn[0].GetComponent<Transform>().position.z ), Quaternion.identity);
-              Instantiate(Monstre, new Vector3(transformSpawn[1].GetComponent<Transform>().position.x,transformSpawn[1].GetComponent<Transform>().position.y,transformSpawn[1].GetComponent<Transform>().position.z ), Quaternion.identity);
-              Instantiate(Monstre, new Vector3(transformSpawn[2].GetComponent<Transform>().position.x,transformSpawn[2].GetComponent<Transform>().position.y,transformSpawn[2].GetComponent<Transform>().position.z ), Quaternion.identity);
+            UneFois=true;
+             Instantiate(Monstre, new Vector3(transformSpawn[0].GetComponent<Transform>().position.x,transformSpawn[0].GetComponent<Transform>().position.y,0.01f ), Quaternion.identity);
+              Instantiate(Monstre, new Vector3(transformSpawn[1].GetComponent<Transform>().position.x,transformSpawn[1].GetComponent<Transform>().position.y,0.01f ), Quaternion.identity);
+              Instantiate(Monstre, new Vector3(transformSpawn[2].GetComponent<Transform>().position.x,transformSpawn[2].GetComponent<Transform>().position.y,0.01f), Quaternion.identity);
              nombremonstre=3;
         }
     }

@@ -16,9 +16,15 @@ public class AddRoom : MonoBehaviour {
 	 public static float NombreMonstreMort;
 
 	 public bool MoveToSallePos;
+	 private bool PeutJouerSon;
+	private bool JoueSon;
+	public bool P2Rentre;
+	public AudioSource PorteMonte;
 
 	void Start()
 	{
+		PeutJouerSon=true;
+		PorteMonte= GameObject.FindGameObjectWithTag("PorteMonte").GetComponent<AudioSource>();
 		templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
 		templates.rooms.Add(this.gameObject);
 		NombreSalle+=1;
@@ -29,12 +35,20 @@ public class AddRoom : MonoBehaviour {
 	}
 	private void Update() 
 	{
+
+		if(PeutJouerSon&&JoueSon){
+			PorteMonte.Play();
+			PeutJouerSon=false;
+			JoueSon=false;
+		}
+
 		Debug.Log(NombreSalle);
 
 		if(SalleClean&&!jeSuisEnCombat)
 		{
 			 for (var i = 0; i < portes.Count; i++)
              {
+				 JoueSon=true;
                    portes[i].GetComponent<Animator>().SetBool("Ouvre", true);
 				   portes[i].GetComponent<Animator>().SetBool("Ferme", false);
 				   Debug.Log("Portes ouvertes");
@@ -62,7 +76,8 @@ public class AddRoom : MonoBehaviour {
 
 	private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag=="Player"&&SalleClean==false){
+        if(other.tag=="Player"&&SalleClean==false&&P2Rentre){
+			EnemiesTousMorts=false;
 			StartCoroutine(coroutineB());
 		}
 		if(other.tag=="Player"&&SalleClean==true){
@@ -72,6 +87,9 @@ public class AddRoom : MonoBehaviour {
 			Debug.Log("Entre dans pièce");
 			MoveToSallePos=true;
 		}
+		if(other.tag=="Player2"){
+			P2Rentre=true;
+		}
     }
 
 	private void OnTriggerExit2D(Collider2D other)
@@ -79,7 +97,17 @@ public class AddRoom : MonoBehaviour {
 		if(other.tag=="Player"){
 			MoveToSallePos=false;
 		}
+		if(other.tag=="Player2"){
+			P2Rentre=false;
+		}
     }
+
+	private void OnTriggerStay2D(Collider2D other) {
+		if(other.tag=="Player"&&SalleClean==false&&P2Rentre){
+			P2Rentre=false;
+			StartCoroutine(coroutineB());
+		}
+	}
 
 
 		IEnumerator coroutineA()
@@ -99,6 +127,7 @@ public class AddRoom : MonoBehaviour {
 		 yield return new WaitForSeconds(0.5f);
         for (var i = 0; i < portes.Count; i++)
              {
+				  PorteMonte.Play();
 				 jeSuisEnCombat=true;
                    portes[i].GetComponent<Animator>().SetBool("Ferme", true);
 				   portes[i].GetComponent<Animator>().SetBool("Ouvre", false);
