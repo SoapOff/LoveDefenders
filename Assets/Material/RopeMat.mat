@@ -9,8 +9,13 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: RopeMat
   m_Shader: {fileID: 4800000, guid: 0406db5a14f94604a8c57ccfbc9f3b46, type: 3}
+<<<<<<< HEAD
+  m_ShaderKeywords: _EMISSION
+  m_LightmapFlags: 0
+=======
   m_ShaderKeywords: 
   m_LightmapFlags: 6
+>>>>>>> main
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
@@ -108,7 +113,11 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
+<<<<<<< HEAD
+--- !u!114 &3144897552148535446
+=======
 --- !u!114 &9034537827008541442
+>>>>>>> main
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
