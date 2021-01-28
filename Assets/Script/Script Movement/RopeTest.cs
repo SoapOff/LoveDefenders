@@ -9,8 +9,12 @@ public class RopeTest : MonoBehaviour
     [SerializeField] private Transform center;
     [SerializeField] private LayerMask castMask;
     private float radius = 2;
+
+    public List<AudioClip>SonLien;
+    public AudioSource SonChoisi;
     void Start()
     {
+        SonChoisi= GetComponent<AudioSource>();
         _lineRenderer = GetComponent<LineRenderer>();
 
     }
@@ -51,6 +55,8 @@ public class RopeTest : MonoBehaviour
         if(hit.collider != null)
         {
             Destroy(hit.collider.gameObject);
+             SonChoisi.clip=SonLien[Random.Range(0,2)];
+        	SonChoisi.PlayOneShot(SonChoisi.clip);
         }
     }
 

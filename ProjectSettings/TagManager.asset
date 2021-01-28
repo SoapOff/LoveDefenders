@@ -5,7 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+<<<<<<< HEAD
   - Key
+=======
+  - Portes
+  - SpawnPoint
+  - Salle
+  - Rooms
+  - Player2
+  - PorteMonte
+>>>>>>> main
   layers:
   - Default
   - TransparentFX

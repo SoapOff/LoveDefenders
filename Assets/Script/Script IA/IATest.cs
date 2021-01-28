@@ -35,7 +35,7 @@ public class IATest : MonoBehaviour
 
         if (hit)
         {
-            hit.transform.GetComponent<SpriteRenderer>().color = Color.green;
+           
 
             Vector3 direction = Player.position - transform.position;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
@@ -68,5 +68,11 @@ public class IATest : MonoBehaviour
     public void Patrolling()
     {
         moveSpeed = 0f;
+    }
+    void OnDrawGizmos()
+    {
+        // Draw a yellow sphere at the transform's position
+       // Gizmos.color = Color.green;
+       // Gizmos.DrawSphere(transform.position, Radius);
     }
 }
