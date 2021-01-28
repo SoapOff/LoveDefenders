@@ -551,6 +551,7 @@ GameObject:
   - component: {fileID: 368631430}
   - component: {fileID: 368631429}
   - component: {fileID: 368631428}
+  - component: {fileID: 368631433}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player2
@@ -683,6 +684,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &368631433
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368631427}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e246929f6b4e4344faf6466a3ce5f9ea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &413026395
 GameObject:
   m_ObjectHideFlags: 0
@@ -1757,7 +1777,6 @@ MonoBehaviour:
   PorteFinal: {fileID: 706875807}
   target: {fileID: 7170859102375256945}
   Test: 0
-  Move: 0
 --- !u!4 &1134858903
 Transform:
   m_ObjectHideFlags: 0
@@ -2864,6 +2883,7 @@ MonoBehaviour:
   Monstre: {fileID: 6801223142065676252, guid: f77d47b4fa0ffea41bd2f9ffe62fe433, type: 3}
   nombremonstre: 0
   addRoom: {fileID: 0}
+  UneFois: 0
 --- !u!4 &1734932089
 Transform:
   m_ObjectHideFlags: 0
