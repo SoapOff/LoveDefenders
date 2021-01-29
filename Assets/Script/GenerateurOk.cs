@@ -12,9 +12,11 @@ public class GenerateurOk : MonoBehaviour
     public PorteFinaleOuvre porteFinaleOuvre;
     private bool UneFois;
     public static bool ElecOk;
+    public Spawner spawner;
     // Start is called before the first frame update
     void Start()
     {
+         spawner = FindObjectOfType<Spawner>();
         porteFinaleOuvre=GameObject.FindObjectOfType<PorteFinaleOuvre>();
          key=GameObject.FindWithTag("Key").GetComponent<Key>();
          IlFaudrait=GameObject.FindWithTag("Faudrait");
@@ -57,6 +59,7 @@ public class GenerateurOk : MonoBehaviour
         
         yield return new WaitForSeconds(1.0f);
         porteFinaleOuvre.CameraSurPorteOuvre();
+        Spawner.CourantMit=true;
         ElecOk=true;
         Debug.Log("Elec OKK");
        

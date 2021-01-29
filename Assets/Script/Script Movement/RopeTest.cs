@@ -14,8 +14,12 @@ public class RopeTest : MonoBehaviour
     public AudioSource SonChoisi;
     public ScreenShake screenShake;
     private GameObject ObjetTouche;
+    public Spawner spawner;
+    public float NombreMortIndication;
     void Start()
     {
+
+        spawner=GameObject.FindObjectOfType<Spawner>();
         SonChoisi= GetComponent<AudioSource>();
         _lineRenderer = GetComponent<LineRenderer>();
 
@@ -23,6 +27,7 @@ public class RopeTest : MonoBehaviour
 
     void Update()
     {
+        NombreMortIndication=Spawner.NombreMonstreMort;
         p2Radius();
         castEnemy();
         center.position = (player1.transform.position + player2.transform.position) / 2;
@@ -56,15 +61,18 @@ public class RopeTest : MonoBehaviour
         hit = Physics2D.Linecast(player1.transform.position, player2.transform.position, castMask);
         if(hit.collider != null)
         {
+
             ObjetTouche=hit.collider.gameObject;
+            Spawner.NombreMonstreMort+=1;
+             ObjetTouche.GetComponent<CircleCollider2D>().enabled=false;
             ObjetTouche.GetComponentInChildren<ParticleSystem>().Play();
-            //Destroy(hit.collider.gameObject);
-            
              SonChoisi.clip=SonLien[Random.Range(0,2)];
         	SonChoisi.PlayOneShot(SonChoisi.clip);
             screenShake.enabled=true;
              ObjetTouche.GetComponent<InstantiPieces>().SpawnPieces();
             screenShake.shakeDuration=0.25f;
+              ObjetTouche.GetComponent<SpriteRenderer>().enabled=false;
+            Destroy(hit.collider.gameObject,1);
             StartCoroutine(coroutineA());
         }
     }
@@ -79,7 +87,6 @@ public class RopeTest : MonoBehaviour
         
         yield return new WaitForSeconds(0.25f);
        screenShake.enabled=false;
-       ObjetTouche.GetComponent<CircleCollider2D>().enabled=false;
     }
 
 }

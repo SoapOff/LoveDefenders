@@ -16,6 +16,8 @@ TagManager:
   - KeySon
   - Repare
   - Faudrait
+  - ToucherRobot
+  - Liens
   layers:
   - Default
   - TransparentFX
