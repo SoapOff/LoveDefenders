@@ -66,7 +66,11 @@ public class AddRoom : MonoBehaviour {
 		}
 
 		if(MoveToSallePos==true){
-			cam.transform.position = Vector3.MoveTowards(cam.transform.position, transformSalle.position, 0.05f);
+			cam.transform.position = Vector3.MoveTowards(cam.transform.position, transformSalle.position, 0.1f);
+		}
+		if(this.GetComponentInChildren<Spawner>().OKSalle==true){
+			SalleClean=true;
+			EnemiesTousMorts=true;
 		}
 	}
 
@@ -87,10 +91,12 @@ public class AddRoom : MonoBehaviour {
 			Debug.Log("Déjà venu ici , pas de combat");
 		}
 		if(other.tag=="Player"){
+			Spawner.NombreMonstreMort=0f;
 			Debug.Log("Entre dans pièce");
 			MoveToSallePos=true;
 		}
 		if(other.tag=="Player2"){
+			Spawner.NombreMonstreMort=0f;
 			P2Rentre=true;
 		}
 		if(other.tag=="Player"&&GenerateurOk.ElecOk==true&&New==false){
@@ -103,9 +109,11 @@ public class AddRoom : MonoBehaviour {
 	private void OnTriggerExit2D(Collider2D other)
     {
 		if(other.tag=="Player"){
+			Spawner.NombreMonstreMort=0f;
 			MoveToSallePos=false;
 		}
 		if(other.tag=="Player2"){
+			Spawner.NombreMonstreMort=0f;
 			P2Rentre=false;
 		}
     }
@@ -122,6 +130,7 @@ public class AddRoom : MonoBehaviour {
     {
         
         yield return new WaitForSeconds(3f);
+		generateurOk=GameObject.FindObjectOfType<GenerateurOk>();
 		foreach(GameObject Portes in GameObject.FindGameObjectsWithTag("Portes"))
 		 {
  

@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 91c6e50d736035140879fca561c616e3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c700e704940bd9549800fdce85f2b855, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,7 +102,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 2.56}
+    oldSize: {x: 19.2, y: 10.8}
     newSize: {x: 2.56, y: 2.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -125,6 +125,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: {fileID: 0}
   IlFaudrait: {fileID: 0}
+  Repare: {fileID: 0}
+  porteFinaleOuvre: {fileID: 0}
+  spawner: {fileID: 0}
 --- !u!1 &2063117002670539446
 GameObject:
   m_ObjectHideFlags: 0

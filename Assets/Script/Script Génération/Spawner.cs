@@ -10,10 +10,14 @@ public class Spawner : MonoBehaviour
     public float nombremonstre;
     public AddRoom addRoom;
      public static float NombreMonstreMort;
-     public bool UneFois;
      public  GameObject[] ListIA;
      public  int index;
      public GenerateurOk generateurOk;
+     public bool UneFois;
+     public bool DeuxFois;
+     public static bool CourantMit;
+     public bool OKSalle;
+     public float VoitNombreMonstreMort;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +30,9 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        VoitNombreMonstreMort=NombreMonstreMort;
+        generateurOk=GameObject.FindObjectOfType<GenerateurOk>();
+
         if(SpawnOuPas==1){
             transformSpawn[0].SetActive(false);
              transformSpawn[1].SetActive(false);
@@ -39,6 +46,9 @@ public class Spawner : MonoBehaviour
         }
         if(nombremonstre==NombreMonstreMort&&nombremonstre>0)
         {
+            OKSalle=true;
+            addRoom.SalleClean=true;
+            addRoom.EnemiesTousMorts=true;
             addRoom.SalleFini();
             NombreMonstreMort=0f;
             Debug.Log( NombreMonstreMort);
@@ -47,10 +57,13 @@ public class Spawner : MonoBehaviour
 
     public void Spawn()
     {
+        if(CourantMit==false)
+    {
 
-        if(SpawnOuPas==1)
-        {
             
+        if(SpawnOuPas==1&&UneFois==false)
+        {
+            UneFois=true;
             index = Random.Range (0, ListIA.Length);
             Monstre=ListIA[index];
              Instantiate(Monstre, new Vector3(transformSpawn[2].GetComponent<Transform>().position.x,transformSpawn[2].GetComponent<Transform>().position.y,0.01f), Quaternion.identity);
@@ -59,9 +72,9 @@ public class Spawner : MonoBehaviour
              Monstre=ListIA[index];
         
         }
-        if(SpawnOuPas==2)
+        if(SpawnOuPas==2&&UneFois==false)
         {
-            
+            UneFois=true;
              Instantiate(Monstre, new Vector3(transformSpawn[0].GetComponent<Transform>().position.x,transformSpawn[0].GetComponent<Transform>().position.y,0.01f), Quaternion.identity);
              index = Random.Range (0, ListIA.Length);
              Monstre=ListIA[index];
@@ -70,9 +83,9 @@ public class Spawner : MonoBehaviour
               Monstre=ListIA[index];
              nombremonstre=2;
         }
-        if(SpawnOuPas==3)
+        if(SpawnOuPas==3&&UneFois==false)
         {
-            
+            UneFois=true;
              Instantiate(Monstre, new Vector3(transformSpawn[0].GetComponent<Transform>().position.x,transformSpawn[0].GetComponent<Transform>().position.y,0.01f ), Quaternion.identity);
              index = Random.Range (0, ListIA.Length);
              Monstre=ListIA[index];
@@ -84,5 +97,50 @@ public class Spawner : MonoBehaviour
               Monstre=ListIA[index];
              nombremonstre=3;
         }
+
+      }
+
+      if(CourantMit==true)
+    {
+
+            
+        if(SpawnOuPas==1&&DeuxFois==false)
+        {
+           DeuxFois=true;
+            index = Random.Range (0, ListIA.Length);
+            Monstre=ListIA[index];
+             Instantiate(Monstre, new Vector3(transformSpawn[2].GetComponent<Transform>().position.x,transformSpawn[2].GetComponent<Transform>().position.y,0.01f), Quaternion.identity);
+             nombremonstre=1;
+             index = Random.Range (0, ListIA.Length);
+             Monstre=ListIA[index];
+        
+        }
+        if(SpawnOuPas==2&&DeuxFois==false)
+        {
+            DeuxFois=true;
+             Instantiate(Monstre, new Vector3(transformSpawn[0].GetComponent<Transform>().position.x,transformSpawn[0].GetComponent<Transform>().position.y,0.01f), Quaternion.identity);
+             index = Random.Range (0, ListIA.Length);
+             Monstre=ListIA[index];
+              Instantiate(Monstre, new Vector3(transformSpawn[1].GetComponent<Transform>().position.x,transformSpawn[1].GetComponent<Transform>().position.y,0.01f ), Quaternion.identity);
+              index = Random.Range (0, ListIA.Length);
+              Monstre=ListIA[index];
+             nombremonstre=2;
+        }
+        if(SpawnOuPas==3&&DeuxFois==false)
+        {
+            DeuxFois=true;
+             Instantiate(Monstre, new Vector3(transformSpawn[0].GetComponent<Transform>().position.x,transformSpawn[0].GetComponent<Transform>().position.y,0.01f ), Quaternion.identity);
+             index = Random.Range (0, ListIA.Length);
+             Monstre=ListIA[index];
+              Instantiate(Monstre, new Vector3(transformSpawn[1].GetComponent<Transform>().position.x,transformSpawn[1].GetComponent<Transform>().position.y,0.01f ), Quaternion.identity);
+              index = Random.Range (0, ListIA.Length);
+              Monstre=ListIA[index];
+              Instantiate(Monstre, new Vector3(transformSpawn[2].GetComponent<Transform>().position.x,transformSpawn[2].GetComponent<Transform>().position.y,0.01f), Quaternion.identity);
+              index = Random.Range (0, ListIA.Length);
+              Monstre=ListIA[index];
+             nombremonstre=3;
+        }
+
+      }
     }
 }
