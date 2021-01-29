@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class PorteFinaleOuvre : MonoBehaviour
 {
-    public static bool OutilRecup;
-    public static bool GenerateurOk;
     private bool UneFois;
     public GameObject CameraMain;
     public GameObject CameraPorte;
     public GameObject PorteFinal;
     public Transform target;
-    public bool Test;
     private bool OneTime;
     private bool Allez;
 
@@ -24,17 +21,6 @@ public class PorteFinaleOuvre : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(OutilRecup&&GenerateurOk&&!UneFois)
-        {
-            CameraSurPorteOuvre();
-        }
-
-        if(Test==true&&OneTime==false)
-        {
-            OneTime=true;
-            OutilRecup=true;
-            GenerateurOk=true;
-        }
     }
 
     public void CameraSurPorteOuvre()
@@ -48,6 +34,7 @@ public class PorteFinaleOuvre : MonoBehaviour
 
     IEnumerator coroutineA()
     {
+        Debug.Log("Singe");
         yield return new WaitForSeconds(0.5f);
         CameraPorte.SetActive(true);
         CameraMain.SetActive(false);
