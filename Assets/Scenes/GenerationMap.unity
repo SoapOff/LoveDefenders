@@ -1757,7 +1757,6 @@ MonoBehaviour:
   PorteFinal: {fileID: 706875807}
   target: {fileID: 7170859102375256945}
   Test: 0
-  Move: 0
 --- !u!4 &1134858903
 Transform:
   m_ObjectHideFlags: 0
@@ -2020,7 +2019,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.26
+  orthographic size: 4.99
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2864,6 +2863,7 @@ MonoBehaviour:
   Monstre: {fileID: 6801223142065676252, guid: f77d47b4fa0ffea41bd2f9ffe62fe433, type: 3}
   nombremonstre: 0
   addRoom: {fileID: 0}
+  UneFois: 0
 --- !u!4 &1734932089
 Transform:
   m_ObjectHideFlags: 0
