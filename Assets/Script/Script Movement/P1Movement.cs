@@ -8,10 +8,12 @@ public class P1Movement : MonoBehaviour
     private Vector2 moveDirection;
     [SerializeField] private float moveSpeed = 60f;
     private bool facingRight = true;
+    Animator anim;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -27,6 +29,14 @@ public class P1Movement : MonoBehaviour
 
         moveDirection = new Vector2(moveY, moveX).normalized;
         rb.AddForce(new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed));
+        anim.SetFloat("MoveX", moveY);
+        anim.SetFloat("MoveY", moveX);
+
+        if (Input.GetAxisRaw("Horizontal") == 1 || Input.GetAxisRaw("Horizontal") == -1 || Input.GetAxisRaw("Vertical") == 1 || Input.GetAxisRaw("Vertical") == -1)
+        {
+            anim.SetFloat("LastMoveX", Input.GetAxisRaw("Horizontal"));
+            anim.SetFloat("LastMoveY", Input.GetAxisRaw("Vertical"));
+        }
 
         //rotate sprite
         if (moveY > 0)

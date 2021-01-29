@@ -29,11 +29,14 @@ public class P2Movement : MonoBehaviour
 
         moveDirection = new Vector2(moveY, moveX).normalized;
         rb.AddForce(new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed));
+        anim.SetFloat("MoveX", moveY);
+        anim.SetFloat("MoveY", moveX);
 
-        if (Input.GetKey(KeyCode.K) || Input.GetKey(KeyCode.M))
-            anim.SetBool("isRunning", true);
-        else
-            anim.SetBool("isRunning", false);
+        if(Input.GetAxisRaw("P2_Horizontal") == 1 || Input.GetAxisRaw("P2_Horizontal") == -1 || Input.GetAxisRaw("P2_Vertical") == 1 || Input.GetAxisRaw("P2_Vertical") == -1)
+        {
+            anim.SetFloat("LastMoveX", Input.GetAxisRaw("P2_Horizontal"));
+            anim.SetFloat("LastMoveY", Input.GetAxisRaw("P2_Vertical"));
+        }
 
         //rotate sprite
         if (moveY > 0)
