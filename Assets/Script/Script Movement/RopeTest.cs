@@ -12,6 +12,8 @@ public class RopeTest : MonoBehaviour
 
     public List<AudioClip>SonLien;
     public AudioSource SonChoisi;
+    public ScreenShake screenShake;
+    private GameObject ObjetTouche;
     void Start()
     {
         SonChoisi= GetComponent<AudioSource>();
@@ -54,9 +56,16 @@ public class RopeTest : MonoBehaviour
         hit = Physics2D.Linecast(player1.transform.position, player2.transform.position, castMask);
         if(hit.collider != null)
         {
-            Destroy(hit.collider.gameObject);
+            ObjetTouche=hit.collider.gameObject;
+            ObjetTouche.GetComponentInChildren<ParticleSystem>().Play();
+            //Destroy(hit.collider.gameObject);
+            
              SonChoisi.clip=SonLien[Random.Range(0,2)];
         	SonChoisi.PlayOneShot(SonChoisi.clip);
+            screenShake.enabled=true;
+             ObjetTouche.GetComponent<InstantiPieces>().SpawnPieces();
+            screenShake.shakeDuration=0.25f;
+            StartCoroutine(coroutineA());
         }
     }
 
@@ -64,4 +73,13 @@ public class RopeTest : MonoBehaviour
     {
         Gizmos.DrawWireSphere(center.position, radius);
     }
+
+    IEnumerator coroutineA()
+    {
+        
+        yield return new WaitForSeconds(0.25f);
+       screenShake.enabled=false;
+       ObjetTouche.GetComponent<CircleCollider2D>().enabled=false;
+    }
+
 }

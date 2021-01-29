@@ -287,6 +287,8 @@ MonoBehaviour:
   transformSalle: {fileID: 954407153087469382}
   spawner: {fileID: 7968167054033217023}
   MoveToSallePos: 0
+  P2Rentre: 0
+  PorteMonte: {fileID: 0}
 --- !u!61 &2066337375647439190
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -600,7 +602,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 784e99b99b6723b40a70289e13e6f98a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -992,7 +994,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 784e99b99b6723b40a70289e13e6f98a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1105,7 +1107,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 784e99b99b6723b40a70289e13e6f98a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1750,6 +1752,11 @@ MonoBehaviour:
   - {fileID: 4398514153765280923}
   - {fileID: 5267844627180785203}
   - {fileID: 2507087280552339681}
-  Monstre: {fileID: 6801223142065676252, guid: f77d47b4fa0ffea41bd2f9ffe62fe433, type: 3}
+  Monstre: {fileID: 0}
   nombremonstre: 0
   addRoom: {fileID: 114679393966003484}
+  UneFois: 0
+  ListIA:
+  - {fileID: 2821207791925453625, guid: 68eea85a02ab0524aa281bf139184352, type: 3}
+  - {fileID: 5231187938339555777, guid: 1032af8048966284fbf33ac7e08249e2, type: 3}
+  index: 0

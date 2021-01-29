@@ -20,9 +20,12 @@ public class AddRoom : MonoBehaviour {
 	private bool JoueSon;
 	public bool P2Rentre;
 	public AudioSource PorteMonte;
+	public GenerateurOk generateurOk;
+	private bool New;
 
 	void Start()
 	{
+		generateurOk=GameObject.FindObjectOfType<GenerateurOk>();
 		PeutJouerSon=true;
 		PorteMonte= GameObject.FindGameObjectWithTag("PorteMonte").GetComponent<AudioSource>();
 		templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
@@ -80,7 +83,7 @@ public class AddRoom : MonoBehaviour {
 			EnemiesTousMorts=false;
 			StartCoroutine(coroutineB());
 		}
-		if(other.tag=="Player"&&SalleClean==true){
+		if(other.tag=="Player"&&SalleClean==true&&GenerateurOk.ElecOk==false){
 			Debug.Log("Déjà venu ici , pas de combat");
 		}
 		if(other.tag=="Player"){
@@ -89,6 +92,11 @@ public class AddRoom : MonoBehaviour {
 		}
 		if(other.tag=="Player2"){
 			P2Rentre=true;
+		}
+		if(other.tag=="Player"&&GenerateurOk.ElecOk==true&&New==false){
+			New=true;
+			EnemiesTousMorts=false;
+			StartCoroutine(coroutineB());
 		}
     }
 

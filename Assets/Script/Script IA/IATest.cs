@@ -7,6 +7,7 @@ public class IATest : MonoBehaviour
 
     public Transform Player;
     public float moveSpeed = 12f;
+    public float ValeurChangeSpeed;
 
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -22,6 +23,7 @@ public class IATest : MonoBehaviour
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        Player=GameObject.FindWithTag("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -44,7 +46,7 @@ public class IATest : MonoBehaviour
             movement = direction;
 
             OutRange = false;
-            moveSpeed = 12f;
+            moveSpeed = ValeurChangeSpeed;
         }
         else
         {   
@@ -67,7 +69,7 @@ public class IATest : MonoBehaviour
 
     public void Patrolling()
     {
-        moveSpeed = 0f;
+        moveSpeed = 1f;
     }
     void OnDrawGizmos()
     {
