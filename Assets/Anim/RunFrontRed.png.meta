@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: 90afdf0c0552bcd4093806b09e2c3b83
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6886067007152012045
+    second: RunFrontRed_0
+  - first:
+      213: 8524861622919746529
+    second: RunFrontRed_1
+  - first:
+      213: -4980475684320415223
+    second: RunFrontRed_2
+  - first:
+      213: -5203143359326711112
+    second: RunFrontRed_3
+  - first:
+      213: -3673924414600682516
+    second: RunFrontRed_4
+  - first:
+      213: 6620175911641964296
+    second: RunFrontRed_5
+  - first:
+      213: 2175524804839393920
+    second: RunFrontRed_6
+  - first:
+      213: 7897801433746615548
+    second: RunFrontRed_7
+  - first:
+      213: 1803942371498003630
+    second: RunFrontRed_8
+  - first:
+      213: -3803785811546988292
+    second: RunFrontRed_9
+  - first:
+      213: -1210153887061539747
+    second: RunFrontRed_10
+  - first:
+      213: 1847186958515242062
+    second: RunFrontRed_11
+  - first:
+      213: -5006955069011445699
+    second: RunFrontRed_12
+  - first:
+      213: 7736155367239840379
+    second: RunFrontRed_13
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RunFrontRed_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 674
+        width: 181
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f4ca2b7a86cf60a0800000000000000
+      internalID: -6886067007152012045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunFrontRed_1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 689
+        width: 183
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e3dd79ba746e4670800000000000000
+      internalID: 8524861622919746529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunFrontRed_2
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 664
+        width: 184
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9027c97b0cbc1eab0800000000000000
+      internalID: -4980475684320415223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunFrontRed_3
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 656
+        width: 183
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b216ef9ea8bac7b0800000000000000
+      internalID: -5203143359326711112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunFrontRed_4
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 666
+        width: 184
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce36710d539930dc0800000000000000
+      internalID: -3673924414600682516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunFrontRed_5
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 659
+        width: 182
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80f540c9ae69fdb50800000000000000
+      internalID: 6620175911641964296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunFrontRed_6
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 656
+        width: 183
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ac0889844013e10800000000000000
+      internalID: 2175524804839393920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunFrontRed_7
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 674
+        width: 182
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfca9054f80aa9d60800000000000000
+      internalID: 7897801433746615548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunFrontRed_8
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 312
+        width: 183
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac0a687704e80910800000000000000
+      internalID: 1803942371498003630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunFrontRed_9
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 311
+        width: 182
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0221d25fc363bc0800000000000000
+      internalID: -3803785811546988292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunFrontRed_10
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 309
+        width: 184
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d54832e837ba43fe0800000000000000
+      internalID: -1210153887061539747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunFrontRed_11
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 299
+        width: 186
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e44090080c682a910800000000000000
+      internalID: 1847186958515242062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunFrontRed_12
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 311
+        width: 184
+        height: 335
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d383b3984e8b38ab0800000000000000
+      internalID: -5006955069011445699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RunFrontRed_13
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 311
+        width: 185
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72ff8f81585c5b60800000000000000
+      internalID: 7736155367239840379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

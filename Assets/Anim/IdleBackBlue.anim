@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: IdlePlayerBlueBack
+  m_Name: IdleBackBlue
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -21,7 +21,7 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 1221941781839356313, guid: 34270f5cf9ca6394d91fad08a9e4bfed, type: 3}
-    - time: 1
+    - time: 1.0166667
       value: {fileID: 7785595751362579157, guid: 34270f5cf9ca6394d91fad08a9e4bfed, type: 3}
     - time: 2
       value: {fileID: 1221941781839356313, guid: 34270f5cf9ca6394d91fad08a9e4bfed, type: 3}
